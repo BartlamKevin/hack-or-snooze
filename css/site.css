@@ -36,7 +36,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-self: center;
-    background-color: #f6f6ef;
+    background-color: #d3dfff;
 }
 
 .hidden {

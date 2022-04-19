@@ -5,7 +5,7 @@
 }
 
 .stories-list > li {
-    color: gray;
+    color: #494949;
     font-size: 0.8rem;
     margin: 10px 0;
 }
@@ -35,4 +35,11 @@
 
 .story-user {
     display: block;
+}
+
+.star, .trash-can {
+    font-size: 0.75rem;
+    margin: 0 2px;
+    cursor: pointer;
+    color: #4d478a;
 }

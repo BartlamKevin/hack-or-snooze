@@ -12,8 +12,32 @@ function navAllStories(evt) {
     putStoriesOnPage();
 }
 
-$body.on("click", "#nav-all", navAllStories);
+$navAll.on("click", navAllStories);
 
+function navSubmitClick(evt) {
+    console.debug("navSubmitClick", evt);
+    hidePageComponents();
+    $allStoriesList.show();
+    $submitForm.show();
+}
+
+$navSubmit.on("click", navSubmitClick);
+
+function navFavClick(evt){
+    console.debug("navfavClick", evt);
+    hidePageComponents();
+    putFavListOnPage();
+}
+$navFav.on("click", navFavClick);
+
+function navMyStoriesClick(evt) {
+    console.debug("navMyStories", evt);
+    hidePageComponents();
+    putOwnStoriesOnPage();
+    $ownStories.show();
+}
+
+$navMine.on("click", navMyStoriesClick);
 /** Show login/signup on click on "login" */
 
 function navLoginClick(evt) {

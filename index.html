@@ -36,6 +36,11 @@
             <div class="navbar-brand">
                 <a class="nav-link" href="#" id="nav-all">Hack or Snooze</a>
             </div>
+            <div class="main-nav-links hidden">
+                <a class="nav-link" href="#" id="nav-submit">submit</a>
+                <a class="nav-link" href="#" id="nav-favorites">favorites</a>
+                <a class="nav-link" href="#" id="nav-my-stories">my stories</a>
+            </div>
             <div class="nav-right">
                 <a class="nav-link" href="#" id="nav-login">login/signup</a>
                 <a class="nav-link" href="#" id="nav-user-profile"></a>
@@ -47,11 +52,47 @@
 
         <!-- area for stories (all stories, user stories, favorites) -->
         <section class="stories-container container">
+            <!-- Form for adding a new story -->
+            <form action="" class="hidden" id="submit-form">
+                <div>
+                    <label for="submit-author">author</label>
+                    <input
+                        id="submit-author"
+                        required
+                        placeholder="author name"
+                        type="text"
+                    />
+                </div>
+                <div>
+                    <label for="submit-title">title</label>
+                    <input
+                        id="submit-title"
+                        required
+                        placeholder="story title"
+                        type="text"
+                    />
+                </div>
+                <div>
+                    <label for="submit-url">url</label>
+                    <input
+                        id="submit-url"
+                        required
+                        placeholder="story url"
+                        type="url"
+                    />
+                </div>
+                <button type="submit">submit</button>
+            </form>
             <!-- loading message (removed by JS after stories loaded) -->
             <div id="stories-loading-msg">Loading&hellip;</div>
 
             <!-- List of all stories -->
             <ol id="all-stories-list" class="stories-list"></ol>
+
+            <!-- List of users favroite stories-->
+            <ol id="favorite-stories" class="hidden stories-list"></ol>
+            <!-- List of the stories the user submitted -->
+            <ol id="my-stories" class="hidden stories-list"></ol>
         </section>
 
         <!-- Login and signup forms -->
